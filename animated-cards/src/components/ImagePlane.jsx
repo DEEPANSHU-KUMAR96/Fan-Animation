@@ -7,7 +7,7 @@ const ImagePlane = ({ url, position, rotation, planeWidth, planeHeight }) => {
 
     const geometry = useMemo(() => {
         const geo = new THREE.PlaneGeometry(planeWidth, planeHeight)
-        geo.translate(2.5, planeHeight / 2, 0)
+        geo.translate(planeWidth, planeHeight / 2, 0)
         return geo
     }, [planeWidth, planeHeight])
 

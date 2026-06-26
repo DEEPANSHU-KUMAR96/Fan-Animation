@@ -1,12 +1,16 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import {} from '@react-three/drei'
 import Experience from './components/Experience'
 
 const App = () => {
   return (
-    <div className='parent h-screen w-full'>
-      <Canvas>
+    <div className='w-full h-full'>
+      <Canvas
+        gl={{ antialias: true }}
+        dpr={[1, 2]}
+        camera={{ fov: 75, near: 0.1, far: 100, position: [0, 0, 5] }}
+        performance={{ min: 0.5 }}
+      >
         <Experience />
       </Canvas>
     </div>
