@@ -4,7 +4,7 @@ import Experience from './components/Experience'
 
 const App = () => {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full' style={{ touchAction: 'none' }}>
       <Canvas
         gl={{ antialias: true }}
         dpr={[1, 2]}

@@ -3,6 +3,7 @@ import { useControls } from 'leva';
 import FanGroup from './FanGroup';
 import { OrbitControls } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
+import * as THREE from 'three';
 
 // Adjusts camera FOV and Z-position responsively based on viewport width
 const ResponsiveCamera = () => {
@@ -53,7 +54,10 @@ const Experience = () => {
         enableDamping
         dampingFactor={0.05}
         enableZoom={false}
-        touches={{ ONE: 2, TWO: 1 }}
+        touches={{
+          ONE: THREE.TOUCH.ROTATE,
+          TWO: THREE.TOUCH.DOLLY_PAN,
+        }}
       />
     </>
   )
